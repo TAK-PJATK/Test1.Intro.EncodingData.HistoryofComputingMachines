@@ -1,61 +1,6 @@
 # Test1.Intro.EncodingData.HistoryofComputingMachines
 Introduction. Encoding Data. History of Computing Machines (TAK Computer Techniques and Architecture. Test 1)
 
-Introduction. Encoding Data. History of Computing Machines (TAK Computer Techniques and Architecture. Test 1)
-
-|     |
-| --- |
-| **Introduction. Encoding Data. History of Computing Machines (TAK Computer Techniques and Architecture. Test 1)** |     |
-| _Dominika Pawlik & Paweł Rembelski & PJATK_ |     |
-|     |     |
-| - - - |     |
-|     |     |
-
-  
-  
-
-£ GBP
-
-$ USD
-
-Goodreads:
-
-Pages: 40
-
-Words: 9485
-
-Uploaded: Mon Apr 29 17:33:43 2024
-
-Sent to Kindle: 05 Apr 2024
-
-  
-  
-
-Goodreads:[](#calibre_link-29)
-
-## Table of Contents
-
-*   [introduction-annotated](#calibre_link-12)
-    *   [Introduction](#calibre_link-24)
-    *   [Algorithms (general and computing)](#calibre_link-1)
-    *   [So now — what is a computer?](#calibre_link-13)
-*   [encoding-data](#calibre_link-18)
-    *   [Encoding data](#calibre_link-25)
-    *   [Positional systems](#calibre_link-14)
-    *   [Encoding text](#calibre_link-6)
-    *   [Units of information](#calibre_link-19)
-*   [history-of-computing-machines](#calibre_link-26)
-    *   [A brief history of computing machines](#calibre_link-27)
-    *   [Mechanical machines (since 1502)](#calibre_link-11)
-    *   [Eletromechanical machines (since 1888 )](#calibre_link-10)
-    *   [Transmitter-based machines (since 1938)](#calibre_link-0)
-    *   [Vacuum tube-based machines (since 1939)](#calibre_link-28)
-    *   [0th generation computers: trasmitter-based (since 1941)](#calibre_link-20)
-    *   [1st generation computers: vacuum tube-based (since 1943)](#calibre_link-17)
-    *   [2nd generation computers: transistor-based (since 1956)](#calibre_link-21)
-    *   [3rd generation computers: small- and medium-scale integrated circuits (since 1960)](#calibre_link-22)
-    *   [4th generation computers: large-scale integrated circuits, and later (since 1971)](#calibre_link-9)
-
 # Introduction
 
 On this course, we will define the main notions used in computer science, and describe the basic tools allowing to manage and process information. We will also tell about the structure of main computer components, such as processor or memory.
