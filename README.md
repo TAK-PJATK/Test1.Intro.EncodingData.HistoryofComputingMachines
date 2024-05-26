@@ -1,4 +1,4 @@
-# Test1 Intro, EncodingData, History of Computing Machines
+# Test 1 Intro, Encoding Data, History of Computing Machines
 
 Introduction. Encoding Data. History of Computing Machines (TAK Computer Techniques and Architecture. Test 1)
 
