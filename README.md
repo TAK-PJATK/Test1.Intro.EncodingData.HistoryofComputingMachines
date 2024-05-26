@@ -51,53 +51,35 @@ Progammability means that the user of a machine can program it, that is, input n
 
 #### Simple stack machine
 
-Imagine a stack of plates on a shelf, A new plate can be only placed on the top; also, a plate can be only taken from the top. We have no access to the plates underneath the top-most one. This is how data storage looks in a stack machine.
+Imagine a stack of plates on a shelf. A new plate can only be placed on the top; similarly, a plate can only be taken from the top. We have no access to the plates underneath the topmost one. This is how data storage looks in a stack machine.
 
 Such a machine allows performing the following operations on the data stored on its stack:
 
-•    ADD:    add two numbers from the top of the stack
+- **ADD**: Add two numbers from the top of the stack and store the result (instead of both these numbers) on the top of the stack.
+- **SUB**: Subtract the topmost number from the second-top number on the stack and store the result (instead of both these numbers) on the top of the stack.
+- **MUL**: Perform multiplication of the top two numbers on the stack and store the result on the top of the stack (similar to ADD).
+- **DIV**: Perform division, specifically dividing the second-top number by the topmost number on the stack, and store the result on the top of the stack (similar to SUB).
+- **PUSH a (where a is some constant)**: Put the value `a` on the top of the stack.
+- **PUSH TOP**: Duplicate the value on the top of the stack (i.e., put it there once again).
+- **PUSH IN**: Read a number from the input and put it on the top of the stack (note: the number "disappears" from the input; it cannot be read again).
+- **OUT TOP**: Take the topmost number out of the stack and write it to the output.
 
-and store the result (instead of both these numbers!) on the top of the stack
+Since in practice this set of commands is very limited, it’s common to consider a stack machine with additional memory with free access type. Besides the stack, we assume additional memory cells indexed by 0, 1, ..., n. We can use two more kinds of instructions:
 
-•    SUB:    subtract two numbers from the top of the stack
+- **MEM(k) TOP**: See the topmost number on the stack and store it (without taking it out from the stack) in the memory cell with index `k`.
+- **PUSH MEM(k)**: Put on top of the stack the value from the memory cell with index `k`.
 
-(specifically, subtract the second-top number from the top-most one) and store the result (instead of both these numbers) on the top of the stack
-
-•    MUL:    analogously to ADD, perform multiplication
-
-•    DIV:    analogously to SUB, perform division
-
-•    PUSH a (where a is some constant):
-
-put the value a on the top of the stack
-
-•    PUSH    TOP:    duplicate the value on the top of the stack (i.e,    put    it there    once again)
-
-•    PUSH    IN:    read a number from the input and put it on    the top of the stack
-
-(note: the number “disappears;; from the input; one cannot e.g, read it again)
-
-•    OUT TOP:    take the top-most number out of the stack and write it to the output
-
-Since in practice this set of commands is very limited, it’s common to consider a stack machine with additional memory with free access type, that is, besides the stack, we assume that somewhere exist additional memory cells indexed by 0, 1, ,,,, n, and that we can use two more kinds of instructions:
-
-•    MEM(k) TOP: see the top-most number out of the stack and store it
-
-(without taking out from the stack) in the memory cell with index k
-
-•    PUSH MEM(k): put on top of the stack the value from memory cell with index k
-
-For example, the program below — given the values a, then b and then c on the input — computes the value A for the quadratic equation ax2 + bx + c = 0 (according to Algorithm 2), To visualize this better, we will tag each instruction with a description of the stack content and the memory content right after its execution, (In that, we will use the convention that the top of the stack is written on the right, and its bottom on the left side).
+For example, the program below — given the values `a`, then `b`, and then `c` as inputs — computes the value \( A \) for the quadratic equation \( ax^2 + bx + c = 0 \) (according to Algorithm 2). To better visualize this, we will tag each instruction with a description of the stack content and the memory content right after its execution. (In this description, the top of the stack is written on the right, and its bottom on the left side.)
 
 ![](images/000027.png)
 
-The last instruction causes printing out the value taken from the top of the stack, which is b2 — 4ac, equal to the desired value of A,
+The last instruction causes printing out the value taken from the top of the stack, which is \( b^2 - 4ac \), equal to the desired value of \( A \).
 
-The list of operations available in a stack machine can vary. On this lecture, we will assume that the stack machine supports the set of operations restricted to the abovementioned ones (together with the additional free-aeeess memory). Yet, it’s worth knowing that, in other situations, stack machines can be considered with a significantly richer set of instructions.
+The list of operations available in a stack machine can vary. In this lecture, we will assume that the stack machine supports the set of operations restricted to the aforementioned ones (together with the additional free-access memory). Yet, it’s worth knowing that, in other contexts, stack machines can have a significantly richer set of instructions.
 
-In our choice of operations, its key property is that it offers no kind of instruction eontaning a conditional jump which could allow diverting the order of executing instructions, and in particular, execute the same code multiple times, (In popular programming languages, such instructions are e.g, if, for, while, goto etc,). This means that, in every program on a stack machine of our kind, every instruction will execute exactly once.
+A key property of our chosen operations is that they do not include any kind of instruction containing a conditional jump that could alter the order of executing instructions or execute the same code multiple times (as seen in popular programming languages with constructs like `if`, `for`, `while`, `goto`, etc.). This means that, in every program on our stack machine, every instruction will execute exactly once.
 
-Therefore, it is impossible on our stack machine e.g, to write a program computing for a given number n its factorial n! = 1 ■ 2 ■... ■ n. That’s because, if such a program existed and contained e.g, 100 instructions, its whole exeuetion could involve at most 100 multiplication operations. However, computing the factorial may require arbitrarily many multiplications (specifically, computing n! requires n — 2 multiplications).
+Therefore, it is impossible on our stack machine to write a program to compute the factorial of a given number \( n \), i.e., \( n! = 1 \times 2 \times ... \times n \). That’s because if such a program existed and contained, for example, 100 instructions, its entire execution could involve at most 100 multiplication operations. However, computing the factorial may require arbitrarily many multiplications (specifically, computing \( n! \) requires \( n - 1 \) multiplications).
 
 For this reason, the stack machine (according to the model from this lecture) is an example of a non-universal computing machine.
 
