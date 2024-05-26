@@ -1,4 +1,5 @@
-# Test1.Intro.EncodingData.HistoryofComputingMachines
+# Test1 Intro, EncodingData, History of Computing Machines
+
 Introduction. Encoding Data. History of Computing Machines (TAK Computer Techniques and Architecture. Test 1)
 
 # Introduction
@@ -12,7 +13,7 @@ The basic term for all of us is a computer. The main difference between a comput
 
 ## Algorithms (general and computing)
 
-An algorithm is essentially a recipe, for acting. Before we proceed to a definition, let us look at examples of algorithms, described by flowcharts:
+An algorithm is essentially a recipe for acting. Before we proceed to a definition, let us look at examples of algorithms, described by flowcharts:
 
 ![](images/000067.png)
 
